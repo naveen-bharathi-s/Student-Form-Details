@@ -1,0 +1,11 @@
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.studenttable-detail {
+    display: none;
+}
+
+.studenttable-detail1 {
+    display: block;
+}

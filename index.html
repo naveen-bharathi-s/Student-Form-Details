@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Form-Details</title>
+
+    <!-- style css -->
+     <link rel="stylesheet" href="style.css">
+    
+    <!-- tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-yellow-400">
+    <div class="grid justify-center items-center py-5 bg-gray-700 mx-5 my-2 rounded-3xl">
+        <div class="grid justify-center items-center m-2 p-4 text-white">
+            <h1 class="text-center text-red-800 font-bold text-4xl border-b-4 rounded-xl">Student Form</h1>
+            <form>
+                <table class="m-2 bg-red-800 rounded-2xl">
+                    <tr>
+                        <th class="p-2"><label for="name">Name:</label></th>
+                        <td class="p-2 text-black "><input type="text" name="name" id="name"
+                                class="focus:outline-none rounded-lg px-2" required></td>
+                    </tr>
+                    <tr>
+                        <th class="p-2"><label for="age">Age:</label></th>
+                        <td class="p-2 text-black"><input type="number" name="age" id="age"
+                                class="focus:outline-none rounded-lg px-2" required></td>
+                    </tr>
+                    <tr>
+                        <th class="p-2"><label for="gender">Gender:</label></th>
+                        <td class="p-2">
+                            <input type="radio" name="gender" value="Male" id="male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" value="Female" id="female">
+                            <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="p-2"><label for="course">Course:</label></th>
+                        <td class="p-2 text-black">
+                            <select name="course" id="course" style="width: 100%;"
+                                class="focus:outline-none rounded-lg px-2" required>
+                                <option value="" selected hidden>--None--</option>
+                                <option value="Java">Java</option>
+                                <option value="C">C</option>
+                                <option value="C#">C#</option>
+                                <option value="C++">C++</option>
+                                <option value="Python">Python</option>
+                                <option value="Javascript">Javascript</option>
+                                <option value="PHP">PHP</option>
+                                <option value="Node.js">Node.js</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="p-2"><label for="email">Email:</label></th>
+                        <td class="p-2 text-black">
+                            <input type="email" name="email" id="email" class="focus:outline-none rounded-lg px-2"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-2">
+                            <button type="submit" style="width: 100%;"
+                                class="bg-gray-700 hover:bg-red-700 text-white font-bold rounded-md py-1"
+                                id="btn">Save</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <br>
+        <div class="overflow-x-auto w-full scrollbar-hide p-2">
+            <table
+                class="min-w-max w-full table-auto border border-black bg-red-800 text-white studenttable-detail rounded-lg"
+                id="studentTable">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-800 px-2"><label for="Name">Name</label></th>
+                        <th class="border border-gray-800 px-2"><label for="age">Age</label></th>
+                        <th class="border border-gray-800 px-2"><label for="Gender">Gender</label></th>
+                        <th class="border border-gray-800 px-2"><label for="Course">Course</label></th>
+                        <th class="border border-gray-800 px-2"><label for="Email">Email</label></th>
+                        <th class="border border-gray-800 px-2"><label for="Action">Action</label></th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- <tr>
+                        <td class="border border-gray-800 px-2">Naveen Bharathi S</td>
+                        <td class="border border-gray-800 px-2">25</td>
+                        <td class="border border-gray-800 px-2">Male</td>
+                        <td class="border border-gray-800 px-2">Javascript</td>
+                        <td class="border border-gray-800 px-2">NaveenBharathi555@gmail.com</td>
+                        <td class="border border-gray-800 px-2">
+                            <button class="bg-gray-700 hover:bg-red-700 text-white font-bold rounded-lg px-2 py-1 m-1"
+                                onclick="deleteItem(event)">Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
